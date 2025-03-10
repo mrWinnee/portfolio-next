@@ -8,10 +8,10 @@ import Contact from "@/components/contact";
 import { WavyBackground } from "@/components/ui/wavy-background";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { FlipWords } from "@/components/ui/flip-words";
-import { BlurFade } from "@/components/magicui/blur-fade";
+import About from "@/components/about";
 
 export default function Home() {
-  const words = ["Yacin", "a Dev", "a Designer", "a Creator"];
+  const words = ["Yacin", "a Developer", "a Designer", "a Creator"];
   return (
     <>
       <FloatingNav navItems={navItems} />
@@ -21,7 +21,7 @@ export default function Home() {
           fill="white"
         />
         <div className="h-[40rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
-          <h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white relative z-20">
+          <h1 className="md:text-5xl text-3xl lg:text-7xl font-bold text-center text-white relative z-20">
             Hi I'm <FlipWords words={words} />
           </h1>
           <div className="w-[40rem] h-40 relative">
@@ -46,12 +46,14 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <h1 id="projects" className="text-4xl md:text-2xl lg:text-4xl font-semibold text-center relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white capitalize"><span className="text-blue-800">our</span><br /><Cover>amazing projects</Cover>
-      </h1>
-      <div className="max-w-5xl mx-auto px-8">
-        <BlurFade delay={0.25} inView>
-          <HoverEffect items={projects} />
-        </BlurFade>
+
+      <About />
+
+
+      <div className="max-w-5xl mx-auto px-8 min-h-screen">
+        <h1 id="projects" className="text-4xl md:text-2xl lg:text-4xl font-semibold text-center relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white capitalize"><span className="text-blue-800">our</span><br /><Cover>amazing projects</Cover>
+        </h1>
+        <HoverEffect items={projects} />
       </div>
       <WavyBackground className="max-w-4xl mx-auto pb-40 relative h-screen w-full">
         <Contact />
