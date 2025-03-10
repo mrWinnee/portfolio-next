@@ -2,8 +2,6 @@
 
 import { FC, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { sendEmail } from '@/utils/send-email';
-import { ShineBorder } from '@/components/magicui/shine-border';
 import { Cover } from '@/components/ui/cover';
 import Notification from '@/components/daisyui/notification';
 
@@ -17,11 +15,23 @@ const Contact: FC = () => {
   const { register, handleSubmit, reset } = useForm<FormData>();
   const [showNotification, setShowNotification] = useState(false);
 
-  function onSubmit(data: FormData) {
-    sendEmail(data);
-    setShowNotification(true);
-    setTimeout(() => setShowNotification(false), 3000); // Hide notification after 3 seconds
-    reset(); // Clear the form
+  async function onSubmit(data: FormData) {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+    });
+    const resData = await res.json();
+    if (resData.success) {
+      setShowNotification(true);
+      setTimeout(() => setShowNotification(false), 3000); // Hide notification after 3 seconds
+      reset(); // Clear the form
+    } else {
+      setShowNotification(false);
+    }
+
+
+
   }
 
   return (
