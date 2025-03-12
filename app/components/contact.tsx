@@ -37,8 +37,8 @@ const Contact: FC = () => {
   return (
     <>
       {showNotification && <Notification />}
-      <form onSubmit={handleSubmit(onSubmit)} className=' max-w-md mx-auto relative p-8 rounded-md shadow-black shadow-2xl z-50 bg-clip-padding backdrop-filter backdrop-blur-xl'>
-        <h1 className='mb-5 text-2xl font-semibold text-white text-center capitalize'><span className='text-blue-800'> stay </span><br /><Cover>in touch</Cover></h1>
+      <form onSubmit={handleSubmit(onSubmit)} className=' max-w-md min-h-screen flex flex-col justify-center mx-auto relative p-8 rounded-md shadow-black shadow-2xl z-50 bg-clip-padding backdrop-filter backdrop-blur-xl'>
+        <h1 className='mb-5 text-4xl md:text-2xl lg:text-4xl font-semibold text-white text-center capitalize'><span className='text-blue-800'> stay </span><br /><Cover>in touch</Cover></h1>
         <br />
         <div className='mb-5'>
           <label

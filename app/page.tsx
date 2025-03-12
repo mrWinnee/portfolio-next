@@ -9,6 +9,7 @@ import { WavyBackground } from "@/components/ui/wavy-background";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { FlipWords } from "@/components/ui/flip-words";
 import About from "@/components/about";
+import { WordRotate } from "@/components/magicui/word-rotate";
 
 export default function Home() {
   const words = ["Yacin", "a Developer", "a Designer", "a Creator"];
@@ -16,13 +17,9 @@ export default function Home() {
     <>
       <FloatingNav navItems={navItems} />
       <main id="home" className="flex w-full h-screen justify-center items-center relative overflow-hidden">
-        <Spotlight
-          className="-top-80 -left-50 "
-          fill="white"
-        />
         <div className="h-[40rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
           <h1 className="md:text-5xl text-3xl lg:text-7xl font-bold text-center text-white relative z-20">
-            Hi I'm <FlipWords words={words} />
+            Hi I'm <WordRotate words={words}/>
           </h1>
           <div className="w-[40rem] h-40 relative">
             {/* Gradients */}

@@ -4,7 +4,7 @@ import { CardSpotlight } from '@/components/ui/card-spotlight'
 
 const About = () => {
     return (
-        <div className=" min-h-screen max-w-screen flex justify-evenly items-center flex-col m-16">
+        <div className=" min-h-screen max-w-screen flex justify-evenly items-center flex-col m-6">
 
 
             <h1 id="about" className="text-4xl md:text-2xl lg:text-4xl font-semibold text-center relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white capitalize"><span className="text-blue-800">Get To</span><br /><Cover>Know Me</Cover>
@@ -12,7 +12,7 @@ const About = () => {
             <CardSpotlight className="hero-content flex-col lg:flex-row-reverse">
                 <img
                     src="/yacin_me.jpg"
-                    className="max-w-sm rounded-lg shadow-2xl z-20" />
+                    className="max-w-sm w-full rounded-lg shadow-2xl z-20" />
                 <div className='z-20'>
                     <h1 className="text-5xl font-bold">Full Stack Developer (Next.js)</h1>
                     <p className="py-6">
